@@ -1,0 +1,14 @@
+{% extends 'mysite/index.html' %}
+
+{% block content %}
+<div class="container">
+    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+        добавить задачу
+    </h3>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</div>
+{% endblock %}
